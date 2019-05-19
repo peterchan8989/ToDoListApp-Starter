@@ -61,6 +61,9 @@ class ToDoDetailsViewController: UIViewController {
     
     @IBAction func taskDidComplete(_ sender: Any) {
         
+        let alert = UIAlertController(title: "confirm", message: "Do you want to complete this task", preferredStyle: .alert)
+        
+        
         toDoItem.isComplete = true
 
         delegate?.update(task: toDoItem, index: toDoIndex)
